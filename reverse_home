@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ynov - Extranet</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="csrf-token" content="gN7lJEbA8eYKeMR8jac1aao2T5L9tjvguCEi6wI4">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://extranet.ynov.com/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/mjolnic/bootstrap-colorpicker/2.3.3/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/kombai/freewall/1.0.6/freewall.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+        <script src="https://cdn.tiny.cloud/1/bh4n37ue85ba4026g3qul3p6i2vf7ajyxv1bqmxgu7eeohkf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script type="text/javascript" src="https://extranet.ynov.com/js/app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css "/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mjolnic/bootstrap-colorpicker/2.3.3/dist/css/bootstrap-colorpicker.css"/>
+        <link href="https://cdn.rawgit.com/flatlogic/awesome-bootstrap-checkbox/dfac8f747362e5e24017f8bb931edf7439c1ce17/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://extranet.ynov.com/css/style.css?v=0.2" />
+        <link rel="icon" type="image/png" href="https://extranet.ynov.com/img/favicon.png" />
+        <script type="text/javascript">
+            var _trans = {
+                appConfirm: 'Êtes-vous sûr ?',
+            };
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container ynov-header">
+        <div class="nav navbar-nav navbar-brand ">
+            <a href="https://extranet.ynov.com"><img class="brand-logo img-responsive" alt="Ynov" src="https://extranet.ynov.com/img/logo_ynovcampus_couleur.png"/> </a>
+        </div>
+    <div>
+        <ul class="nav navbar-nav navbar-right nav-action" >
+            <li class="hidden-xs">
+                <a href="https://extranet.ynov.com/home?lang=fr">fr</a>
+            </li>
+            <li class="hidden-xs">
+                <a href="https://extranet.ynov.com/home?lang=en">en</a>
+            </li>
+                                                            <li class="user-login fat-finger">
+                    <a href="https://monprofil.ynov.com/login" class="user-username" title="Mon Profil (nouvelle fenêtre)" target="_blank"><i class="fa fa-user"></i> yamao.cuzou@ynov.com</a>
+                </li>
+                <li>
+                    <a href="https://extranet.ynov.com/logout" class="fat-finger hidden-xs" title="D&eacute;connexion"><i class="fa fa-power-off"></i></a>
+                </li>
+                    </ul>
+</div></div>        </nav>
+
+        <div class="container">
+            
+            
+            <div class="pull-right topbuttons">
+                            </div>
+        </div>
+        
+
+<div class="container" style="margin-bottom: 20px;">
+    <div class="row-fluid">
+        <div class="col-md-12 text-center" style="padding:0;">
+            <div class="btn-wrapper">
+                <button type="button" class="btn btn-default filter">Tout</button>
+                                                            <button type="button" class="btn btn-default filter" data-filter=".categorie1">Applications m&eacute;tiers</button>
+                                                                                <button type="button" class="btn btn-default filter" data-filter=".categorie4">Scolarit&eacute;</button>
+                                                                                <button type="button" class="btn btn-default filter" data-filter=".categorie3">Promotions et partenariats</button>
+                                                                                <button type="button" class="btn btn-default filter" data-filter=".categorie5">Documents</button>
+                                                </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="layout">
+                <div class="freewall" id="metro">
+                                                                        <a href="https://support.ynov.com/hc/fr/signin?return_to=https%3A%2F%2Fsupport.ynov.com%2Fhc%2Ffr">
+                                <div class="item element1x2 categorie1" data-original-id="103" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/92239028-c3d7-4b62-806f-eb001cdc2365" />
+                                        </div>
+                                        <div class="item-title">Centre d&#039;aide &amp; support</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Acc&egrave;s &agrave; la plateforme de Support Ynov
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://lms.7speaking.com/ynov/sso/index.php">
+                                <div class="item element1x1 categorie4" data-original-id="105" data-handle=".handle" style="background:#33e1cf;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/4b0e51d6-339f-4abc-aa70-20b070825d18" />
+                                        </div>
+                                        <div class="item-title">7speaking</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Votre plateforme d&#039;apprentissage linguistique en ligne.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://scolarite.ynov.com?v=1529316260">
+                                <div class="item element1x2 categorie4" data-original-id="30" data-handle=".handle" style="background:#33e1cf;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/4a6c06a9-2d15-49e7-a162-7d159f67e3b7" />
+                                        </div>
+                                        <div class="item-title">Hyperplanning</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Emploi du temps, relev&eacute; de notes, bulletins, tout sur votre scolarit&eacute; Ynov
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://candidature.ynov.com/login">
+                                <div class="item element1x2 categorie4" data-original-id="4" data-handle=".handle" style="background:#666666;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/f0accdb5-65fa-4fe4-814f-60e001ea396e" />
+                                        </div>
+                                        <div class="item-title">Dossier de candidature</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        D&eacute;posez et g&eacute;rez vos dossiers de candidature en ligne pour int&eacute;grer les formations Ynov
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://ymatch.ynov.com/login">
+                                <div class="item element2x2 categorie4" data-original-id="8" data-handle=".handle" style="background:#666666;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/10820724-5007-4894-8f1e-4f0993cc0a17" />
+                                        </div>
+                                        <div class="item-title">YMatch (JobBoard, CVth&egrave;que)</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Le service YMatch permet aux entreprises de d&eacute;poser leurs offres de stage, d&#039;alternance et d&#039;emploi et aux &eacute;tudiants de d&eacute;poser leur CV.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://monprofil.ynov.com/login">
+                                <div class="item element2x2 categorie4" data-original-id="11" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/3caea4f0-5f70-4dda-a3f1-aeb97698ec94" />
+                                        </div>
+                                        <div class="item-title">Mon profil</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Le service de modification de profil.
+                                Une information sur votre profil change ? Vous avez un acc&egrave;s pour la modifier.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/go/autodesk">
+                                <div class="item element1x1 categorie3" data-original-id="14" data-handle=".handle" style="background:#666666;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/62d4712f-d70a-4e73-8818-edfb9007a5ab" />
+                                        </div>
+                                        <div class="item-title">Offres Autodesk</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Profitez de licences de 36 mois gratuitement afin de vous aider dans vos projets.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/offres-ordinateur">
+                                <div class="item element1x2 categorie3" data-original-id="69" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/41fd0bb0-f876-48ee-9ba7-32059367cdae" />
+                                        </div>
+                                        <div class="item-title">Offres achat ordinateur</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Retrouvez les offres des constructeurs Dell, HP, Apple et Microsoft et b&eacute;n&eacute;ficiez d&#039;un prix sp&eacute;cial &eacute;tudiant lors de l&#039;achat de votre ordinateur portable.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/offres-materiel">
+                                <div class="item element1x2 categorie3" data-original-id="74" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/3652e2e0-2834-47ee-80bb-61ef7e4fd230" />
+                                        </div>
+                                        <div class="item-title">Offres achat mat&eacute;riel</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Retrouvez les offres des constructeurs pour b&eacute;n&eacute;ficier d&#039;un prix sp&eacute;cial &eacute;tudiant lors de votre achat de mat&eacute;riel (tablette graphique, ...)
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/microsoft">
+                                <div class="item element1x2 categorie3" data-original-id="17" data-handle=".handle" style="background:#33e1cf;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/c397fe4e-ed0e-4b8c-a1af-f56bbacd4c3a" />
+                                        </div>
+                                        <div class="item-title">Offres Microsoft</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Avec Microsoft, les membres d&#039;Ynov ont acc&egrave;s &agrave; de nombreux avantages sur ses produits et services : Office 365 ProPlus gratuit, licences pour outils et logiciels et r&eacute;ductions sur du mat&eacute;riel.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/isic">
+                                <div class="item element1x1 categorie3" data-original-id="18" data-handle=".handle" style="background:#cccccc;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/c762304e-f3c1-4b76-bcfb-dd34316c132b" />
+                                        </div>
+                                        <div class="item-title">Offres carte ISIC</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        D&eacute;couvrez les avantages de la carte &eacute;tudiante internationale ISIC (loisirs, voyages...).
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://www.yammer.com/ynov.com/?show_login=true">
+                                <div class="item element1x1 categorie4" data-original-id="25" data-handle=".handle" style="background:#cccccc;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/4e54b177-adaf-4757-94ca-23462dd19d7e" />
+                                        </div>
+                                        <div class="item-title">Yammer</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Votre r&eacute;seau social : cr&eacute;er des discussions et des groupes au sein de la communaut&eacute; Ynov
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://extranet.ynov.com/docs/ynov_reglement_2324.pdf">
+                                <div class="item element1x2 categorie5" data-original-id="31" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/3b9a495e-37da-42be-b349-36d1ad26daf3" />
+                                        </div>
+                                        <div class="item-title">R&egrave;glement int&eacute;rieur</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        R&egrave;glement int&eacute;rieur 2023/2024
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="http://mail.ynov.com">
+                                <div class="item element2x2 categorie4" data-original-id="23" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/b3a18d34-1fa5-448b-ace2-fe3cf5e12496" />
+                                        </div>
+                                        <div class="item-title">Webmail Ynov</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Pour consulter vos mails Ynov partout o&ugrave; vous vous trouvez
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/ylearning">
+                                <div class="item element2x2 categorie4" data-original-id="47" data-handle=".handle" style="background:#33e1cf;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/3dc3f098-b610-4508-a994-e71c18572467" />
+                                        </div>
+                                        <div class="item-title">Suite YLearning</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Acc&eacute;dez aux outils de la Suite YLearning :
+
+LinkedIn Learning (Tutoriels vid&eacute;o), SurveyMonkey (sondages et questionnaires en ligne), Moodle (plateforme p&eacute;dagogique YNOV)
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://auvencecom.sharepoint.com/sites/Nantes">
+                                <div class="item element1x2 categorie4" data-original-id="38" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/70ea178c-a6c6-490d-a30a-4582e7876135" />
+                                        </div>
+                                        <div class="item-title">SharePoint Nantes</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Acc&eacute;dez au SharePoint de votre YnovCampus Nantes
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://extranet.ynov.com/docs/ynov_reglement_pedagogique_2324.pdf">
+                                <div class="item element1x2 categorie5" data-original-id="45" data-handle=".handle" style="background:#ff90b0;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/aa8292f5-583a-491b-9ddc-74858caadc27" />
+                                        </div>
+                                        <div class="item-title">R&egrave;glement P&eacute;dagogique</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        R&egrave;glement P&eacute;dagogique 2023/2024
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://brand.ynov.com/login">
+                                <div class="item element1x2 categorie5" data-original-id="49" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/17add876-b810-4954-a6f3-c4f6500c3c25" />
+                                        </div>
+                                        <div class="item-title">Brand Guidelines</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Ressources graphiques et r&egrave;gles d&#039;utilisation des logos
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/offres-logiciels">
+                                <div class="item element1x2 categorie3" data-original-id="90" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/ae709065-f717-4796-9f42-9e145dca3184" />
+                                        </div>
+                                        <div class="item-title">Offres - Logiciels</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Acc&eacute;dez &agrave; des offres de logiciels gratuits ou &agrave; prix r&eacute;duit directement aupr&egrave;s des &eacute;diteurs ou de nos partenaires.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/adobe">
+                                <div class="item element1x2 categorie3" data-original-id="71" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/dd8dd475-5db1-452f-81ae-377525198bc3" />
+                                        </div>
+                                        <div class="item-title">Offres Adobe</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Offres en partenariat avec Adobe permettant aux &eacute;tudiants de b&eacute;n&eacute;ficier de certains logiciels Adobe gratuitement ou &agrave; prix r&eacute;duit.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="http://services.ynov.com/go/github-edu">
+                                <div class="item element1x2 categorie3" data-original-id="75" data-handle=".handle" style="background:#ec4363;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/04552d89-1988-411f-95ff-c3b22b315310" />
+                                        </div>
+                                        <div class="item-title">Offres Github</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Acc&eacute;dez au Github Students Developer Pack
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://extranet.ynov.com/docs/charte_informatique_apprenants_v0.4.pdf">
+                                <div class="item element1x2 categorie5" data-original-id="73" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/9ddbc678-7705-43f3-90e8-e4ff974cbb8b" />
+                                        </div>
+                                        <div class="item-title">Charte informatique</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Charte d&#039;utilisation des moyens informatiques et des outils num&eacute;riques par les apprenants
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://dossierapprenant.ynov.com/login">
+                                <div class="item element1x2 categorie4" data-original-id="83" data-handle=".handle" style="background:#ff90b0;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/f8d6a567-7387-4f1f-838f-74820327b594" />
+                                        </div>
+                                        <div class="item-title">Dossier apprenant</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Cette interface vous permet d&#039;obtenir votre certificat de scolarit&eacute;, de fournir votre CVEC, d&#039;uploader des documents justificatifs et de renseigner vos souhaits d&#039;options.
+                                    </div>
+                                </div>
+                            </a>
+                                                    <a href="https://services.ynov.com/view/fisio">
+                                <div class="item element1x2 categorie3" data-original-id="92" data-handle=".handle" style="background:#00ae9c;color:#ffffff">
+                                    <div class="item-content">
+                                        <div class="item-icon">
+                                            <img src="https://extranet.ynov.com/uploads/ee372219-abbe-4493-a9e8-c66d9587ff38" />
+                                        </div>
+                                        <div class="item-title">Fisio - Outil cr&eacute;ation CV</div>
+                                    </div>
+                                    <div class="item-overlay">
+                                        Outil gratuit de cr&eacute;ation de CV pour les apprenants
+                                    </div>
+                                </div>
+                            </a>
+                                                            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<script>
+    $(function () {
+        var wall = new Freewall("#metro");
+        table = new Object();
+        wall.reset({
+            selector: ".item",
+            animate: true,
+            cellW: 150,
+            cellH: "auto",
+            gutterX: 5,
+            gutterY: 5,
+            onResize: function () {
+                wall.fitWidth();
+            }
+        });
+        var images = wall.container.find('.item');
+        images.find('img').load(function() {
+            wall.fitWidth();
+        });
+        $(window).trigger("resize");
+
+        $(".filter").click(function () {
+            $(".filter").removeClass("active");
+            var filter = $(this).addClass('active').data('filter');
+            if (filter) {
+                wall.filter(filter);
+            } else {
+                wall.unFilter();
+            }
+        });
+    });
+</script>
+                                        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69739943-3', 'auto');
+  ga('send', 'pageview');
+</script>
+                                                <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NGNFDK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGNFDK');</script>
+<!-- End Google Tag Manager -->
+                                <footer class="footer text-center" >
+            <div class="container">
+                <ul class="list-inline">
+                    <li class="left-whisker"><a href="mailto:support@ynov.com">Contact</a></li>
+                    <li>•</li>
+                    <li><a href="https://extranet.ynov.com/mentions-legales">Mentions légales</a></li>
+                    <li>•</li>
+                    <li class="right-whisker"><a href="https://extranet.ynov.com/cookies">Cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+        <p class="cookiebar" style="display: none; font-size: 15px;">
+            Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site. En continuant votre navigation, vous acceptez leur utilisation.
+            <span class="cookiebar-btns">
+                <a id="cookiebar_more" href="https://extranet.ynov.com/cookies" role="button" class="btn btn-default btn-sm" style="font-size: 15px;">En savoir plus</a>
+                <a id="cookiebar_close" href="#" role="button" class="btn btn-danger btn-sm" style="font-size: 15px;"><span class="glyphicon glyphicon-remove"></span> Fermer</a>
+            </span>
+        </p>
+    </body>
+</html>
