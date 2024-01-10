@@ -43,7 +43,7 @@ select option:disabled {
 }
 
 .navbar-default {
-    background-color: #000000;
+    background-color: #FFF;
     border: none;
 }
 
@@ -162,6 +162,8 @@ a:hover {
     background-color: #E0FFFF;
 }
 
+
+
 /** New classes **/
 .delete-on-click:hover,
 .delete-on-click:active {
@@ -210,6 +212,7 @@ a:hover {
     padding-top: 2px;
     font-size: 9px;
 }
+
 
 .navbar-collapse.collapse ul.nav li p.navbar-text,
 .navbar-collapse.collapse ul.nav li p.navbar-btn {
@@ -365,6 +368,11 @@ a:hover {
     margin: 0
 }
 
+.navbar-right img {
+    width: 15px;
+    height: auto;
+}
+
 #login h3.action-header {
     margin-bottom: 1.5em;
 }
@@ -405,7 +413,7 @@ a:hover {
 .navbar-default .navbar-nav>li>a,
 .btn-default,
 .dropdown-menu>li>a {
-    color: #ffffff;
+    color: #ec4363;
     font-size: 14px;
 }
 
@@ -574,7 +582,7 @@ p {
 .cc_container .cc_btn,
 .cc_container .cc_btn {
     background-color: #ec4363 !important;
-    color: #000000 !important;
+    color: #fff !important;
 }
 
 .modal-campaign {
@@ -643,7 +651,7 @@ p {
     border-radius: 4px;
     text-align: center;
     background: #ec4363;
-    color: black;
+    color: white;
     background-image: repeating-linear-gradient(30deg, rgba(236, 67, 99, .05), rgba(236, 67, 99, .05) 10px, transparent 0, transparent 20px);
 }
 
@@ -656,5 +664,3 @@ p {
     float: left;
     font-size: 6.5em;
 }
-
-
