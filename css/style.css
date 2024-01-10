@@ -34,7 +34,7 @@ select option:disabled {
     color: #CCCCCC;
 }
 .navbar-default {
-    background-color: #FFF;
+    background-color: #000000;
     border:none;
 }
 
@@ -91,8 +91,6 @@ a:focus, a:hover {
     background-color: #E0FFFF;
 }
 
-
-
 /** New classes **/
 .delete-on-click:hover, .delete-on-click:active {
     background-color:#CCCCCC !important;
@@ -126,12 +124,12 @@ a:focus, a:hover {
     font-family: 'Glyphicons Halflings';
     content: "\e013";
 }
+
 .checkbox label:after {
     padding-left: 4px;
     padding-top: 2px;
     font-size: 9px;
 }
-
 
 .navbar-collapse.collapse ul.nav li p.navbar-text, .navbar-collapse.collapse ul.nav li p.navbar-btn {
     text-align: center;
@@ -320,7 +318,7 @@ a:focus, a:hover {
 }
 
 .navbar-default .navbar-nav>li>a, .btn-default, .dropdown-menu > li > a {
-    color: #ec4363;
+    color: #ffffff;
     font-size:14px;
 }
 
@@ -415,7 +413,7 @@ p {
 
 .cc_container .cc_btn, .cc_container .cc_btn {
     background-color: #ec4363 !important;
-    color:#fff !important;
+    color:#000000 !important;
 }
 
 .modal-campaign {
@@ -482,7 +480,7 @@ p {
     border-radius: 4px;
     text-align: center;
     background: #ec4363;
-    color : white;
+    color : black;
     background-image: repeating-linear-gradient(30deg, rgba(236, 67, 99, .05), rgba(236, 67, 99, .05) 10px, transparent 0, transparent 20px);
 }
 
