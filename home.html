@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <div id="transition_page" class=" transition active"></div>
     <nav class="navbar navbar-default">
         <div class="container ynov-header">
             <div class="nav navbar-nav navbar-brand ">
@@ -570,3 +571,29 @@
 </body>
 
 </html>
+
+<script>
+    const transition = document.querySelector(".transition");
+
+    setTimeout(() => {
+        transition.classList.remove("active");
+    }, 400);
+
+    const liens = document.querySelectorAll('nav a');
+
+    liens.forEach(lien => {
+        lien.addEventListener('click', function (event) {
+            event.preventDefault();
+            transition.classList.add('active');
+
+            const currentURL = window.location.href;
+            const newURL = currentURL.includes('home.html') ? currentURL.replace('home.html', 'reverse_home.html') :
+                currentURL.includes('reverse_home.html') ? currentURL.replace('reverse_home.html', 'home.html') :
+                    'home.html';
+
+            setTimeout(() => {
+                window.location.href = newURL;
+            }, 400);
+        });
+    });
+</script>

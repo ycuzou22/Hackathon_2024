@@ -1,13 +1,29 @@
-const card = document.getElementById('card');
-const iconContainer = document.getElementById('iconContainer');
-const moonIcon = document.getElementById('moonIcon');
-const sunIcon = document.getElementById('sunIcon');
+const transition = document.querySelector(".transition");
+setTimeout(function () {
+    transition.classList.remove("active");
+}, 400);
 
-let isFlipped = false;
+const liens = document.querySelectorAll('nav a');
 
-iconContainer.addEventListener('click', () => {
-    card.style.transform = isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)';
-    moonIcon.style.display = isFlipped ? 'inline' : 'none';
-    sunIcon.style.display = isFlipped ? 'none' : 'inline';
-    isFlipped = !isFlipped;
-});
+for (i = 0; i < liens.length; i++) {
+    let lien = liens[i];
+
+    lien.addEventListener('click', function (event) {
+        event.preventDefault();
+        transition.classList.add('active');
+
+        // Récupérer la nouvelle URL de la page cible
+        let nouvellePage = '';
+
+        // Vérifier quel lien a été cliqué et attribuer la nouvelle URL en conséquence
+        if (this.getAttribute('href') === 'home.html') {
+            nouvellePage = 'reverse_home.html'; // Lien inverse de home.html
+        } else if (this.getAttribute('href') === 'reverse_home.html') {
+            nouvellePage = 'home.html'; // Lien inverse de reverse_home.html
+        }
+
+        setTimeout(function () {
+            window.location.href = nouvellePage; // Rediriger vers la nouvelle page après l'animation
+        }, 400);
+    });
+}
