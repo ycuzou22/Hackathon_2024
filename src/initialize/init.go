@@ -22,6 +22,9 @@ func StartServ() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	fmt.Println("http://localhost" + port + " 🚀")
 	http.HandleFunc("/", handle.HandleMain)
+	http.HandleFunc("/home", handle.HandleHome)
+	http.HandleFunc("/reverse", handle.HandleReverse)
+	http.HandleFunc("/reservation", handle.HandleReservations)
 	http.HandleFunc("/login", MicrosoftLogin)
 	http.HandleFunc("/callback", MicrosoftCallback)
 	http.HandleFunc("/warehouse", handle.ScrapWare)
@@ -70,7 +73,7 @@ func MicrosoftCallback(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println("user : ", userDetails)
 
-	http.Redirect(w, r, "/profile", http.StatusFound)
+	http.Redirect(w, r, "/reverse", http.StatusFound)
 }
 
 func getUserDetails(accessToken string) (map[string]interface{}, error) {

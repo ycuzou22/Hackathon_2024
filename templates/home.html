@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/home.css" />
     <link rel="icon" type="image/png" href="https://extranet.ynov.com/img/favicon.png" />
     <script type="text/javascript">
         var _trans = {
@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <div id="transition_page" class=" transition active"></div>
     <nav class="navbar navbar-default">
         <div class="container ynov-header">
             <div class="nav navbar-nav navbar-brand ">
@@ -63,7 +64,7 @@
                             title="D&eacute;connexion"><i class="fa fa-power-off"></i></a>
                     </li>
                     <li>
-                        <a href="reverse_home.html"><i><img src="../static/img/soleil.png" alt="WhiteYnov"></i> </a>
+                        <a href="/reverse"><i><img src="/static/img/soleil.png" alt="WhiteYnov"></i> </a>
                     </li>
                 </ul>
             </div>
@@ -569,3 +570,29 @@
 </body>
 
 </html>
+
+<script>
+    const transition = document.querySelector(".transition");
+
+    setTimeout(() => {
+        transition.classList.remove("active");
+    }, 400);
+
+    const liens = document.querySelectorAll('nav a');
+
+    liens.forEach(lien => {
+        lien.addEventListener('click', function (event) {
+            event.preventDefault();
+            transition.classList.add('active');
+
+            const currentURL = window.location.href;
+            const newURL = currentURL.includes('/home') ? currentURL.replace('/home', '/reverse') :
+                currentURL.includes('/reverse') ? currentURL.replace('/reverse', '/home') :
+                    '/home';
+
+            setTimeout(() => {
+                window.location.href = newURL;
+            }, 400);
+        });
+    });
+</script>
