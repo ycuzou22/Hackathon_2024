@@ -35,12 +35,13 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
 }
 
 func HandleMain(w http.ResponseWriter, r *http.Request) {
-	RenderTemplate(w, "home.html", nil)
-	// w.Write([]byte(`<a href="/login">Se connecter avec Microsoft</a>`))
+	http.Redirect(w, r, "/home", http.StatusFound)
 }
-func HandleProfile(w http.ResponseWriter, r *http.Request) {
-
-	w.Write([]byte("Page de profil de l'utilisateur"))
+func HandleHome(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "home.html", nil)
+}
+func HandleReverse(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "reverse_home.html", nil)
 }
 
 func ScrapWare(w http.ResponseWriter, r *http.Request) {
