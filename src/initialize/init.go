@@ -8,19 +8,18 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gorilla/securecookie"
 	"github.com/joho/godotenv"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/microsoft"
 )
 
 var (
-	oauthConf     *oauth2.Config
-	cookieHandler *securecookie.SecureCookie
-	port          = ":8080"
+	oauthConf *oauth2.Config
+	port      = ":8080"
 )
 
 func StartServ() {
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	fmt.Println("http://localhost" + port + " 🚀")
 	http.HandleFunc("/", handle.HandleMain)
 	http.HandleFunc("/login", MicrosoftLogin)
@@ -46,11 +45,6 @@ func init() {
 		Endpoint:     microsoft.AzureADEndpoint("common"),
 		Scopes:       []string{"User.Read"},
 	}
-
-	cookieHandler = securecookie.New(
-		securecookie.GenerateRandomKey(64),
-		securecookie.GenerateRandomKey(32),
-	)
 }
 
 // func for Microsoft connexion
