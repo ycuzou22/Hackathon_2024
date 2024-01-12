@@ -24,6 +24,7 @@ func StartServ() {
 	http.HandleFunc("/", handle.HandleMain)
 	http.HandleFunc("/home", handle.HandleHome)
 	http.HandleFunc("/reverse", handle.HandleReverse)
+	http.HandleFunc("/reservation", handle.HandleReservations)
 	http.HandleFunc("/login", MicrosoftLogin)
 	http.HandleFunc("/callback", MicrosoftCallback)
 	http.HandleFunc("/warehouse", handle.ScrapWare)

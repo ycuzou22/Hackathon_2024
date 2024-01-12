@@ -43,6 +43,9 @@ func HandleHome(w http.ResponseWriter, r *http.Request) {
 func HandleReverse(w http.ResponseWriter, r *http.Request) {
 	RenderTemplate(w, "reverse_home.html", nil)
 }
+func HandleReservations(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "reservation.html", nil)
+}
 
 func ScrapWare(w http.ResponseWriter, r *http.Request) {
 	url := "https://www.warehouse-nantes.fr/event"
