@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="../static/css/forum.css">
     <title>Forum avec Espace de Messages</title>
 </head>
 
@@ -17,33 +17,27 @@
         <div class="container">
             <ul>
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Catégorie 1</a></li>
-                <li><a href="#">Catégorie 2</a></li>
-                <li><a href="#">Catégorie 3</a></li>
+                <li><a href="#">Bureau des étudiants</a></li>
+                <li><a href="#">Bureau des sports</a></li>
             </ul>
         </div>
     </nav>
     
     <section id="content">
         <div class="container">
+            <h1>Données depuis SQLite</h1>
             <div class="message-box">
                 <div class="user-avatar"></div>
                 <div class="message-content">
-                    <p class="user-name">Nom de l'utilisateur</p>
-                    <p class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in lorem vel justo tincidunt tincidunt.</p>
+                    <p class="user-name">Yamao</p>
+                    <p class="message-text">Salut les gars comment cela ce passe</p>
                 </div>
             </div>
             <div class="message-box">
                 <div class="user-avatar"></div>
-                <ul>
-                    {% for row in data %}
-                    <li>{{ row }}</li>
-                    {% endfor %}
+                <div class="message-content">
                     <p class="user-name">Autre Utilisateur</p>
                     <p class="message-text">Un autre message intéressant ici.</p>
-                </ul>
-                <div class="message-content">
-                    <h1>Données depuis SQLite</h1>
                 </div>
             </div>
         </div>
