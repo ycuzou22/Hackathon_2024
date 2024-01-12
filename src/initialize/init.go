@@ -20,6 +20,15 @@ var (
 	port          = ":8080"
 )
 
+func StartServ() {
+	fmt.Println("http://localhost" + port + " 🚀")
+	http.HandleFunc("/", handle.HandleMain)
+	http.HandleFunc("/login", MicrosoftLogin)
+	http.HandleFunc("/callback", MicrosoftCallback)
+	http.HandleFunc("/warehouse", handle.ScrapWare)
+	http.ListenAndServe(port, nil)
+}
+
 // init .env and OAuth2 configuration
 func init() {
 	if err := godotenv.Load(); err != nil {
@@ -44,14 +53,6 @@ func init() {
 	)
 }
 
-func StartServ() {
-	fmt.Println("http://localhost" + port + " 🚀")
-	http.HandleFunc("/", handle.HandleMain)
-	http.HandleFunc("/login", MicrosoftLogin)
-	http.HandleFunc("/callback", MicrosoftCallback)
-	http.ListenAndServe(port, nil)
-}
-
 // func for Microsoft connexion
 
 func MicrosoftLogin(w http.ResponseWriter, r *http.Request) {
@@ -69,12 +70,11 @@ func MicrosoftCallback(w http.ResponseWriter, r *http.Request) {
 
 	userDetails, err := getUserDetails(token.AccessToken)
 	if err != nil {
-		http.Error(w, "Erreur lors de la récupération des détails de l'utilisateur", http.StatusInternalServerError)
+		http.Error(w, "Erreur", http.StatusInternalServerError)
 		return
 	}
 
-	// Afficher les détails de l'utilisateur dans la console
-	fmt.Println("Détails de l'utilisateur : ", userDetails)
+	fmt.Println("user : ", userDetails)
 
 	http.Redirect(w, r, "/profile", http.StatusFound)
 }

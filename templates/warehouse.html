@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warehouse-nantes</title>
+</head>
+<body>
+
+    {{range .Results}}
+        <div>
+            <a href="https://www.warehouse-nantes.fr{{.AHref}}"><img src="{{.ImgSrc}}" alt="Image"></a>
+            <h2>{{.H2Content}}</h2>
+            <small>{{.SmallContent}}</small>
+            </a>
+        </div>
+    {{end}}
+</body>
+</html>
