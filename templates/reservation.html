@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation de salles</title>
+    <link rel="stylesheet" href="../static/css/reservation.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../templates/reverse_home.html" class="logolink">
+            <img class="brand-logo img-responsive" alt="Ynov" src="../static/img/logo_ynovcampus_couleur.png" />
+        </a>
+        <a href="reverse_home.html" class="modenuit">
+            <img src="../static/img/lune_20.png" alt="WhiteYnov">
+        </a>
+    </nav>
+
+    <div class="reservation-container">
+        <h1>Réservation de salles</h1>
+
+        <form id="reservationForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="salle">Salle :</label>
+            <select id="salle" name="salle" required>
+                <optgroup label="Étage 1">
+                    <option value="101">Salle 101</option>
+                    <option value="102">Salle 102</option>
+                    <option value="103">Salle 103</option>
+                    <option value="104">Salle 104</option>
+                    <option value="105">Salle 105</option>
+                    <option value="106">Salle 106</option>
+                </optgroup>
+                <optgroup label="Étage 2">
+                    <option value="201">Salle 201</option>
+                    <option value="202">Salle 202</option>
+                    <option value="203">Salle 203</option>
+                    <option value="204">Salle 204</option>
+                    <option value="205">Salle 205</option>
+                    <option value="206">Salle 206</option>
+                </optgroup>
+                <optgroup label="Étage 3">
+                    <option value="301">Salle 301</option>
+                    <option value="302">Salle 302</option>
+                    <option value="303">Salle 303</option>
+                    <option value="304">Salle 304</option>
+                    <option value="305">Salle 305</option>
+                    <option value="306">Salle 306</option>
+                </optgroup>
+            </select>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+
+        </form>
+    </div>
+    <form id="blietzkrieg-button">
+        <div class="center">
+            <button type="button" onclick="reserverSalle()">Réserver</button>
+        </div>
+    </form>
+    <script>
+        var disponibiliteSalles = {
+            '101': ['2024-01-15', '2024-01-16', '2024-12-01'],
+            '102': ['2024-01-18', '2024-02-01', '2024-12-20'],
+            '103': ['2024-02-15', '2024-02-20', '2024-12-15'],
+            '104': ['2024-03-10', '2024-03-20'],
+            '105': ['2024-04-01', '2024-04-15'],
+            '106': ['2024-05-01', '2024-05-15'],
+            '201': ['2024-06-01', '2024-06-15'],
+            '202': ['2024-07-01', '2024-07-15'],
+            '203': ['2024-08-01', '2024-08-15'],
+            '204': ['2024-09-01', '2024-09-15'],
+            '205': ['2024-10-01', '2024-10-15'],
+            '206': ['2024-11-01', '2024-11-15'],
+            '301': ['2025-01-01', '2025-01-15'],
+            '302': ['2025-02-01', '2025-02-15'],
+            '303': ['2025-03-01', '2025-03-15'],
+            '304': ['2025-04-01', '2025-04-15'],
+            '305': ['2025-05-01', '2025-05-15'],
+            '306': ['2025-06-01', '2025-06-15']
+        };
+
+        function reserverSalle() {
+            var nom = document.getElementById('nom').value;
+            var salle = document.getElementById('salle').value;
+            var date = document.getElementById('date').value;
+
+            if (nom === "EleveAutorise") {
+                if (verifierDisponibiliteSalle(salle, date)) {
+                    alert('Réservation effectuée avec succès!');
+
+                    if (disponibiliteSalles.hasOwnProperty(salle)) {
+                        disponibiliteSalles[salle].push(date);
+                    } else {
+                        disponibiliteSalles[salle] = [date];
+                    }
+
+                    document.getElementById('nom').value = '';
+                    document.getElementById('salle').selectedIndex = 0;
+                    document.getElementById('date').value = '';
+
+                } else {
+                    alert('La salle n\'est pas disponible à la date spécifiée.');
+                }
+            } else {
+                alert('Vous n\'êtes pas autorisé à effectuer une réservation.');
+            }
+        }
+
+        function verifierDisponibiliteSalle(salle, date) {
+            if (disponibiliteSalles.hasOwnProperty(salle)) {
+                return !disponibiliteSalles[salle].includes(date);
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
