@@ -22,6 +22,7 @@ func StartServ() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	fmt.Println("http://localhost" + port + " 🚀")
 	http.HandleFunc("/", handle.HandleMain)
+	http.HandleFunc("/home", handle.HandleHome)
 	http.HandleFunc("/reverse", handle.HandleReverse)
 	http.HandleFunc("/login", MicrosoftLogin)
 	http.HandleFunc("/callback", MicrosoftCallback)

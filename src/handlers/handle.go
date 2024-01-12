@@ -35,8 +35,10 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
 }
 
 func HandleMain(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/home", http.StatusFound)
+}
+func HandleHome(w http.ResponseWriter, r *http.Request) {
 	RenderTemplate(w, "home.html", nil)
-	// w.Write([]byte(`<a href="/login">Se connecter avec Microsoft</a>`))
 }
 func HandleReverse(w http.ResponseWriter, r *http.Request) {
 	RenderTemplate(w, "reverse_home.html", nil)
