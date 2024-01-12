@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/forum.css">
     <title>Forum avec Espace de Messages</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -23,7 +23,7 @@
             </ul>
         </div>
     </nav>
-
+    
     <section id="content">
         <div class="container">
             <div class="message-box">
@@ -33,14 +33,17 @@
                     <p class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in lorem vel justo tincidunt tincidunt.</p>
                 </div>
             </div>
-
-            <!-- Ajoutez d'autres messages ici -->
-
             <div class="message-box">
                 <div class="user-avatar"></div>
-                <div class="message-content">
+                <ul>
+                    {% for row in data %}
+                    <li>{{ row }}</li>
+                    {% endfor %}
                     <p class="user-name">Autre Utilisateur</p>
                     <p class="message-text">Un autre message intéressant ici.</p>
+                </ul>
+                <div class="message-content">
+                    <h1>Données depuis SQLite</h1>
                 </div>
             </div>
         </div>
