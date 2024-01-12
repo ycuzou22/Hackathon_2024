@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forum.css">
+    <title>Forum avec Espace de Messages</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Forum Etudiant</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Catégorie 1</a></li>
+                <li><a href="#">Catégorie 2</a></li>
+                <li><a href="#">Catégorie 3</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="content">
+        <div class="container">
+            <div class="message-box">
+                <div class="user-avatar"></div>
+                <div class="message-content">
+                    <p class="user-name">Nom de l'utilisateur</p>
+                    <p class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in lorem vel justo tincidunt tincidunt.</p>
+                </div>
+            </div>
+            <div class="message-box">
+                <div class="user-avatar"></div>
+                <ul>
+                    {% for row in data %}
+                    <li>{{ row }}</li>
+                    {% endfor %}
+                    <p class="user-name">Autre Utilisateur</p>
+                    <p class="message-text">Un autre message intéressant ici.</p>
+                </ul>
+                <div class="message-content">
+                    <h1>Données depuis SQLite</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+        <input id="m" autocomplete="off" /><button>Envoyer</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Forum Etudiant. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/ware.css">
+    <title>Warehouse-nantes</title>
+</head>
+<body>
+    <img class="wareimg" src="https://www.warehouse-nantes.fr/assets/logo/logotypo-white.svg" alt="warehouse-logo">
+
+    <div class="allevent">
+    {{range .Results}}
+        <div class="ware">
+            <a href="https://www.warehouse-nantes.fr{{.AHref}}"><img src="{{.ImgSrc}}" alt="Image"></a>
+            <div class="txtinfo">
+                <h2>{{.H2Content}}</h2>
+                <small>{{.SmallContent}}</small>
+            </div>
+            </a>
+        </div>
+    {{end}}
+    </div>  
+</body>
+</html>

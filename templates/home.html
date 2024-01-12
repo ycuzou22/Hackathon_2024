@@ -19,7 +19,7 @@
     <script src="https://cdn.tiny.cloud/1/bh4n37ue85ba4026g3qul3p6i2vf7ajyxv1bqmxgu7eeohkf/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
     <script type="text/javascript" src="https://extranet.ynov.com/js/app.js"></script>
-    <link rel="stylesheet" href="bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css " />
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/mjolnic/bootstrap-colorpicker/2.3.3/dist/css/bootstrap-colorpicker.css" />
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
     <link rel="icon" type="image/png" href="https://extranet.ynov.com/img/favicon.png" />
     <script type="text/javascript">
         var _trans = {
@@ -39,11 +39,12 @@
 </head>
 
 <body>
+    <div id="transition_page" class=" transition active"></div>
     <nav class="navbar navbar-default">
         <div class="container ynov-header">
             <div class="nav navbar-nav navbar-brand ">
                 <a href="https://extranet.ynov.com"><img class="brand-logo img-responsive" alt="Ynov"
-                        src="img/logo_ynovcampus_couleur.png" /> </a>
+                        src="https://extranet.ynov.com/img/logo_ynovcampus_couleur.png" /> </a>
             </div>
             <div>
                 <ul class="nav navbar-nav navbar-right nav-action">
@@ -56,14 +57,14 @@
                     <li class="user-login fat-finger">
                         <a href="https://monprofil.ynov.com/login" class="user-username"
                             title="Mon Profil (nouvelle fenêtre)" target="_blank"><i class="fa fa-user"></i>
-                            yamao.cuzou@ynov.com</a>
+                            </a>
                     </li>
                     <li>
                         <a href="https://extranet.ynov.com/logout" class="fat-finger hidden-xs"
                             title="D&eacute;connexion"><i class="fa fa-power-off"></i></a>
                     </li>
                     <li>
-                        <a href="home.html"><i><img src="img/lune_20.png" alt="Darkside"></i> </a>
+                        <a href="reverse_home.html"><i><img src="../static/img/soleil.png" alt="WhiteYnov"></i> </a>
                     </li>
                 </ul>
             </div>
@@ -102,7 +103,7 @@
                         <a
                             href="https://support.ynov.com/hc/fr/signin?return_to=https%3A%2F%2Fsupport.ynov.com%2Fhc%2Ffr">
                             <div class="item element1x2 categorie1" data-original-id="103" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -117,7 +118,7 @@
                         </a>
                         <a href="https://lms.7speaking.com/ynov/sso/index.php">
                             <div class="item element1x1 categorie4" data-original-id="105" data-handle=".handle"
-                                style="background:#e83b36;color:#ffffff">
+                                style="background:#33e1cf;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -132,7 +133,7 @@
                         </a>
                         <a href="https://scolarite.ynov.com?v=1529316260">
                             <div class="item element1x2 categorie4" data-original-id="30" data-handle=".handle"
-                                style="background:#e83b36;color:#ffffff">
+                                style="background:#33e1cf;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -148,7 +149,7 @@
                         </a>
                         <a href="https://candidature.ynov.com/login">
                             <div class="item element1x2 categorie4" data-original-id="4" data-handle=".handle"
-                                style="background:#600538;color:#ffffff">
+                                style="background:#666666;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -164,7 +165,7 @@
                         </a>
                         <a href="https://ymatch.ynov.com/login">
                             <div class="item element2x2 categorie4" data-original-id="8" data-handle=".handle"
-                                style="background:#600538;color:#ffffff">
+                                style="background:#666666;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -181,7 +182,7 @@
                         </a>
                         <a href="https://monprofil.ynov.com/login">
                             <div class="item element2x2 categorie4" data-original-id="11" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -198,7 +199,7 @@
                         </a>
                         <a href="https://services.ynov.com/go/autodesk">
                             <div class="item element1x1 categorie3" data-original-id="14" data-handle=".handle"
-                                style="background:#600538;color:#ffffff">
+                                style="background:#666666;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -213,7 +214,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/offres-ordinateur">
                             <div class="item element1x2 categorie3" data-original-id="69" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -230,7 +231,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/offres-materiel">
                             <div class="item element1x2 categorie3" data-original-id="74" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -247,7 +248,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/microsoft">
                             <div class="item element1x2 categorie3" data-original-id="17" data-handle=".handle"
-                                style="background:#e83b36;color:#ffffff">
+                                style="background:#33e1cf;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -264,7 +265,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/isic">
                             <div class="item element1x1 categorie3" data-original-id="18" data-handle=".handle"
-                                style="background:#fffe01;color:#ffffff">
+                                style="background:#cccccc;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -280,7 +281,7 @@
                         </a>
                         <a href="https://www.yammer.com/ynov.com/?show_login=true">
                             <div class="item element1x1 categorie4" data-original-id="25" data-handle=".handle"
-                                style="background:#fffe01;color:#ffffff">
+                                style="background:#cccccc;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -296,7 +297,7 @@
                         </a>
                         <a href="https://extranet.ynov.com/docs/ynov_reglement_2324.pdf">
                             <div class="item element1x2 categorie5" data-original-id="31" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -311,7 +312,7 @@
                         </a>
                         <a href="http://mail.ynov.com">
                             <div class="item element2x2 categorie4" data-original-id="23" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -326,7 +327,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/ylearning">
                             <div class="item element2x2 categorie4" data-original-id="47" data-handle=".handle"
-                                style="background:#e83b36;color:#ffffff">
+                                style="background:#33e1cf;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -344,7 +345,7 @@
                         </a>
                         <a href="https://auvencecom.sharepoint.com/sites/Nantes">
                             <div class="item element1x2 categorie4" data-original-id="38" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -359,7 +360,7 @@
                         </a>
                         <a href="https://extranet.ynov.com/docs/ynov_reglement_pedagogique_2324.pdf">
                             <div class="item element1x2 categorie5" data-original-id="45" data-handle=".handle"
-                                style="background:#600538;color:#ffffff">
+                                style="background:#ff90b0;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -374,7 +375,7 @@
                         </a>
                         <a href="https://brand.ynov.com/login">
                             <div class="item element1x2 categorie5" data-original-id="49" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -389,7 +390,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/offres-logiciels">
                             <div class="item element1x2 categorie3" data-original-id="90" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -405,7 +406,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/adobe">
                             <div class="item element1x2 categorie3" data-original-id="71" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -422,7 +423,7 @@
                         </a>
                         <a href="http://services.ynov.com/go/github-edu">
                             <div class="item element1x2 categorie3" data-original-id="75" data-handle=".handle"
-                                style="background:#ff8606;color:#ffffff">
+                                style="background:#ec4363;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -437,7 +438,7 @@
                         </a>
                         <a href="https://extranet.ynov.com/docs/charte_informatique_apprenants_v0.4.pdf">
                             <div class="item element1x2 categorie5" data-original-id="73" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -453,7 +454,7 @@
                         </a>
                         <a href="https://dossierapprenant.ynov.com/login">
                             <div class="item element1x2 categorie4" data-original-id="83" data-handle=".handle"
-                                style="background:#600538;color:#ffffff">
+                                style="background:#ff90b0;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -470,7 +471,7 @@
                         </a>
                         <a href="https://services.ynov.com/view/fisio">
                             <div class="item element1x2 categorie3" data-original-id="92" data-handle=".handle"
-                                style="background:#460a40;color:#ffffff">
+                                style="background:#00ae9c;color:#ffffff">
                                 <div class="item-content">
                                     <div class="item-icon">
                                         <img
@@ -569,3 +570,29 @@
 </body>
 
 </html>
+
+<script>
+    const transition = document.querySelector(".transition");
+
+    setTimeout(() => {
+        transition.classList.remove("active");
+    }, 400);
+
+    const liens = document.querySelectorAll('nav a');
+
+    liens.forEach(lien => {
+        lien.addEventListener('click', function (event) {
+            event.preventDefault();
+            transition.classList.add('active');
+
+            const currentURL = window.location.href;
+            const newURL = currentURL.includes('home.html') ? currentURL.replace('home.html', 'reverse_home.html') :
+                currentURL.includes('reverse_home.html') ? currentURL.replace('reverse_home.html', 'home.html') :
+                    'home.html';
+
+            setTimeout(() => {
+                window.location.href = newURL;
+            }, 400);
+        });
+    });
+</script>
