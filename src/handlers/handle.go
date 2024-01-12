@@ -35,7 +35,8 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
 }
 
 func HandleMain(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(`<a href="/login">Se connecter avec Microsoft</a>`))
+	RenderTemplate(w, "home.html", nil)
+	// w.Write([]byte(`<a href="/login">Se connecter avec Microsoft</a>`))
 }
 func HandleProfile(w http.ResponseWriter, r *http.Request) {
 
